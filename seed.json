@@ -1,0 +1,42 @@
+[
+  {
+    "world": -1,
+    "gifts": [
+      {
+        "item_id": 5220000,
+        "serial_number": 10002288,
+        "weight": 1
+      },
+      {
+        "item_id": 5570000,
+        "serial_number": 10003149,
+        "weight": 1
+      },
+      {
+        "item_id": 5510000,
+        "serial_number": 50200085,
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "world": 0,
+    "gifts": [
+      {
+        "item_id": 5520000,
+        "serial_number": 50200100,
+        "weight": 1
+      },
+      {
+        "item_id": 5041000,
+        "serial_number": 92000036,
+        "weight": 1
+      },
+      {
+        "item_id": 5030001,
+        "serial_number": 92000040,
+        "weight": 1
+      }
+    ]
+  }
+]
