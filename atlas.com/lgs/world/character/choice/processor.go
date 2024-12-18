@@ -83,9 +83,6 @@ func ProduceChoices(l logrus.FieldLogger, db *gorm.DB) func(worldId uint32, char
 			return Model{}
 		}
 
-		// Seed the random number generator
-		rand.Seed(time.Now().UnixNano())
-
 		// Sort options by weight
 		sort.Slice(gs, func(i, j int) bool {
 			return gs[i].Weight() > gs[j].Weight()

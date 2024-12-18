@@ -2,6 +2,7 @@ package rest
 
 import (
 	"context"
+	"errors"
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
 	"github.com/sirupsen/logrus"
@@ -59,7 +60,7 @@ func NewServer(cl *logrus.Logger, ctx context.Context, wg *sync.WaitGroup, route
 		wg.Add(1)
 		defer wg.Done()
 		err := hs.ListenAndServe()
-		if err != http.ErrServerClosed {
+		if !errors.Is(err, http.ErrServerClosed) {
 			l.WithError(err).Errorf("Error while serving.")
 			return
 		}

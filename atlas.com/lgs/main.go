@@ -13,7 +13,6 @@ import (
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
 	"io"
-	"io/ioutil"
 	"os"
 	"os/signal"
 	"sync"
@@ -89,7 +88,7 @@ func initializeGifts(l logrus.FieldLogger, db *gorm.DB) {
 		l.Fatalf("Environment variable SEED_JSON_FILE_PATH is not set.")
 	}
 
-	jsonData, err := ioutil.ReadFile(filePath)
+	jsonData, err := os.ReadFile(filePath)
 	if err != nil {
 		l.Fatal("Error reading JSON file:", err)
 	}
